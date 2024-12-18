@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 10px 0 5px;
+  
+  text-align: center;
+
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #008fa1;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #008fa1;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+
+
+
+p{
+    color: white;
+}
+
+*{
+    font-family:"Roboto";
+   
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header {
+    height: 500px; /* Уберите лишние строки с height */
+    position:static;
+    top: 0;
+    left: 0;
+    background-image: url(image/lines.gif);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+   
+}
+
+
+
+  .searchs{
+    margin-top: 180px;
+    text-align: center;
+  } 
+
+  
+  .searc{
+    width: 386px;
+    height: 30px;
+    border: #15171E 2px;
+    border-radius: 40px;
+    padding-top: 6px ;
+    padding-bottom: 6px;
+    padding-left: 140px; 
+    background-image: url(/image/icons8-лупа-50.png)  ;
+    background-position:10px 6px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-top: 20px;
+  
+  
+    
+  }
+
+  ::placeholder{
+    color: #15171E;
+  }
+
+  .inter{
+    position: relative;
+    color: white;
+    display: block;
+     margin-top: -23px; 
+    font-size: 16px;
+    right: 8%;
+    padding-bottom: 20px;
+    float: left;
+}
+    
+  
+  
+   li, ul {
+    color: white;
+    text-decoration: none;
+    
+  }
+.ras{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    /* translate: (-50%, -50%) */
+}
+
+h1{
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    /* translate: (-50%, -50%) */
+}
+
+
+
+body {
+    height: 100vh;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    background-color: #15171E;
+    margin: 0;
+  }
+
+.container {
+   
+    margin: auto auto;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+}
+
+main{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 65px;
+
+}  
+.slova{
+    
+    display: block;
+    margin: 30px auto; 
+    text-align: left;
+
+}
+.slova p{
+    color: white;
+   
+}
+
+
+.slova h2{
+    color: white;
+    font-size: 36px;
+}
+
+.stat{
+    color: white;
+
+}
+.ims{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  
+   
+}
+.ims img{
+    text-align: center;
+   width: 520px;
+   height: 320px; 
+   border: #000000 2px solid ;
+   border-radius: 20px;
+   filter: blur(2px);
+   overflow: hidden;
+  
+transition:transform 0.5s;
+
+}
+
+.image-container {
+    position: relative; /* Для абсолютного позиционирования overlay */
+}
+
+
+.overlay {
+    position: absolute;  /* Позволяет overlay занимать пространство над изображением */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Исходная непрозрачность */
+    transition: opacity 0.5s; /* Плавный переход */
+    border-radius: 20px;
+    border: #000000 2px solid ;
+    width: 520px;
+    height: 320px; 
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Увеличиваем непрозрачность при наведении */
+}
+.text1 {
+    color: white;
+    font-size: 24px; /* Размер шрифта */
+    text-align: center;
+}
+.text2 {
+    color: white;
+    font-size: 24px; /* Размер шрифта */
+    text-align: center;
+}
+.text3 {
+    color: white;
+    font-size: 24px; /* Размер шрифта */
+    text-align: center;
+}
+.text4 {
+    color: white;
+    font-size: 24px; /* Размер шрифта */
+    text-align: center;
+}
+
+.ims img:hover{
+transform: scale(0.9);
+
+}
+
+.ims a{
+color: white;
+
+}
+
+.ser{
+    float: left;
+ 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.pg3{
+float: left;
+
+display: flex;
+justify-content: space-between;
+    flex-direction: column;
+}
+.contact {
+    display: block;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.contact div {
+    display: flex; /* Используем flexbox для выравнивания элементов в ряд */
+    margin: 20px auto;
+    gap: 5px; /* Добавим промежуток между заголовками */
+}
+
+.contact h1 {
+    font-size: 40px;
+    color: #04BFD3;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.contact h4{
+    color: white;
+}
+
+input{
+    width: 386px;
+    height: 30px;
+    border: #000000 2px;
+    border-radius: 40px;
+    padding-top: 6px ;
+    padding-bottom: 6px;
+    padding-left: 140px; 
+ 
+    background-position:10px 6px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-top: 20px;
+}
+.btn{
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center;     /* Центрирует по вертикали */
+    height: 10vh;    
+}
+
+
+.formContainer button {
+    padding: 10px 20px; 
+    width: 444px;                        /* Примерные отступы для кнопки */
+    height:52px ;
+    font-size: 16px;         /* Размер шрифта */
+    background-color: #14FDCE; /* Цвет фона кнопки */
+    border: none;            /* Убираем обводку */
+    border-radius: 10px;      /* Скругление углов */
+    color: rgb(0, 0, 0);            /* Цвет текста */
+    cursor: pointer;        /* Курсор для кнопки */
+}
+
+footer{
+    margin-top: 100px;
+    background-color:#001A20 ;
+  width: 100%;  
+   height: 376px;
+   text-decoration: none;
+   
+   
+}
+.top {
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 15px;
+    flex: 1;      
+    display: flex;           /* Flexbox для выравнивания элементов в строку */
+    justify-content: space-between; /* Пространство между элементами */
+    align-items: center;  
+     text-decoration: none;       /* Позволяет элементу занять доступное пространство */
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding-right: 20px;
+}
+
+.menu {
+    list-style: none;        /* Убираем стандартные маркеры списка */
+    margin: 10px 0 5px;      /* Отступы сверху и снизу */
+    padding: 0;              /* Убираем внутренние отступы */
+    display: flex;           /* Flexbox для выравнивания элементов в ряд */
+    justify-content: flex-end; /* Выравнивание элементов списка по правому краю */
+    gap: 15px;     
+          /* Промежутки между элементами */
+}
+
+.menu li {
+    display: inline-block;   /* Элементы списка будут располагаться в строку */
+    font-size: 16px;   
+            /* Размер шрифта */
+}
+
+.menu ul{
+text-decoration: none;  
+
+}
+.create-line
+ { width: 100%;
+   border-top: 3px solid #ffffff; 
+}
+.bott {
+    display: block;  /* Элементы будут располагаться в одну строку */
+    text-align: left;      /* Выравнивание текста по левому краю */
+    color: white;          /* Цвет текста */
+    margin: 30px auto;      /* Растягиваем элемент на всю доступную ширину (если нужно) */
+}
+.bott div{
+    padding-left: 20px;
+}
